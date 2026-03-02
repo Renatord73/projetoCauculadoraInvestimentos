@@ -49,7 +49,7 @@ function clearForm() {
 
   for (const errorInputsContainer of errorInputsContainers) {
     errorInputsContainer.classList.remove('error');
-    errorInputsContainer.parentElement.querySelector('p').remove();
+    errorInputsContainers.parentElement.querySelector('p').remove();
   }
 }
 
