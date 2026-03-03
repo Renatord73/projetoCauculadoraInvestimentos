@@ -45,7 +45,7 @@ function renderProgression(evt) {
     returnRatePeriod,
   );
 
-  finalInvestmentObject = returnsArray[returnsArray.length - 1];
+  const finalInvestmentObject = returnsArray[returnsArray.length - 1];
 
   doughnutChartReference = new Chart(finalMoneyChart, {
     type: 'doughnut',
