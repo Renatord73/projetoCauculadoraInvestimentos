@@ -38,12 +38,12 @@ export function generateReturnsArray(
     timeReference <= finalTimeHorizon;
     timeReference++
   ) {
-    const totalAmount =
+    const totalAmount = // valorMesPassado * 5% ->
       returnsArray[timeReference - 1].totalAmount * finalReturnRate +
       monthlyContribution;
 
     const interestReturns =
-      returnsArray[timeReference - 1].totalAmount * finalReturnRate;
+      returnsArray[timeReference - 1].totalAmount * (finalReturnRate - 1) ;
     const investedAmount = startingAmount + monthlyContribution * timeReference;
     const totalInterestReturns = totalAmount - investedAmount;
     returnsArray.push({
